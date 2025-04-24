@@ -22,6 +22,7 @@ import MainContent from '@/pages/MainContent';
 import LandingPage from '@/pages/LandingPage';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import config from '@/config/config';
+import { Analytics } from "@vercel/analytics/react"
 
 /**
  * App component serves as the root of the application.
@@ -72,6 +73,8 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#FDA4AF" /> {/* Rose-300 color */}
       </Helmet>
+
+      <Analytics/>
 
       <AnimatePresence mode='wait'>
         {!isInvitationOpen ? (
