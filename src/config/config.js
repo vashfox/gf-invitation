@@ -43,17 +43,17 @@ const config = {
     banks: [
       {
         bank: "(BPI) Bank of the Philippine Islands",
-        accountNumber: "1234567890",
+        accountNumber: "8669265183",
         accountName: "Generose Ratilla",
       },
       {
         bank: "Landbank of the Philippines",
-        accountNumber: "12345678902",
+        accountNumber: "0745109640",
         accountName: "Generose Ratilla",
       },
       {
         bank: "GCash",
-        accountNumber: "12345678901",
+        accountNumber: "09502208298",
         accountName: "Generose Ratilla",
       }
     ]
