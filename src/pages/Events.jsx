@@ -8,6 +8,8 @@ export default function Events() {
         <>
             {/* Event Section */}
             <section id="event" className="min-h-screen relative overflow-hidden">
+                <div className="bg-stl bg-stl-bottom bg-img-event absolute" />
+                
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

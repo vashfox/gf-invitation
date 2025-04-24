@@ -118,6 +118,11 @@
   height: 30vh;
 }
 
+.bg-img-event {
+  background-image: url("/images/RLS-223.jpg");
+  height: 30vh;
+}
+
 .bg-img-landing-top:after {
   content: "";
   position: absolute;
@@ -146,4 +151,24 @@
   width: 100%;
   height: 30vh;
   background: linear-gradient(to top, white 0%, transparent 100%);
+}
+
+.bg-img-event:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to top, white 0%, transparent 100%);
+}
+
+.bg-img-event:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to bottom, white 0%, transparent 100%);
 }
