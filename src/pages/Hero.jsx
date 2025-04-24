@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react';
 import config from '@/config/config';
 import { formatEventDate } from '@/lib/formatEventDate';
-import { safeBase64 } from '@/lib/base64';
 
 export default function Hero() {
     const [guestName, setGuestName] = useState('');
@@ -14,7 +13,6 @@ export default function Hero() {
 
         if (guestParam) {
             try {
-                const decodedName = safeBase64.decode(guestParam);
                 setGuestName(guestParam);
             } catch (error) {
                 console.error('Error decoding guest name:', error);
@@ -23,6 +21,7 @@ export default function Hero() {
         }
     }, []);
 
+    // eslint-disable-next-line react/prop-types
     const CountdownTimer = ({ targetDate }) => {
         const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
         function calculateTimeLeft() {
