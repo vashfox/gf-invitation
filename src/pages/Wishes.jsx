@@ -242,7 +242,7 @@ export default function Wishes() {
                                             : "text-gray-700 hover:bg-yellow-50"
                                         }`}
                             >
-                              {JSON.stringify(attendance)} - {option.label}
+                              {option.label}
                             </motion.button>
                           ))}
                         </motion.div>
