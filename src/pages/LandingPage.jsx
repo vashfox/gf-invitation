@@ -16,8 +16,8 @@ const LandingPage = ({ onOpenInvitation }) => (
     <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-yellow-100/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
     <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-amber-100/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" /> */}
 
-    <div className="bg-img-landing-top absolute" />
-    <div className="bg-img-landing-bottom absolute" />
+    <div className="bg-stl bg-stl-top bg-img-landing-top absolute" />
+    <div className="bg-stl bg-stl-bottom bg-img-landing-bottom absolute" />
 
     {/* Main Content */}
     <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">

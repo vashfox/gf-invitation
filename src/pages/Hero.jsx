@@ -106,6 +106,8 @@ export default function Hero() {
     return (
         <>
             <section id="home" className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden">
+                <div className="bg-stl bg-stl-top bg-img-home absolute" />
+                
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
