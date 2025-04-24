@@ -48,12 +48,12 @@ const config = {
       },
       {
         bank: "Landbank of the Philippines",
-        accountNumber: "1234567890",
+        accountNumber: "12345678902",
         accountName: "Generose Ratilla",
       },
       {
         bank: "GCash",
-        accountNumber: "1234567890",
+        accountNumber: "12345678901",
         accountName: "Generose Ratilla",
       }
     ]
