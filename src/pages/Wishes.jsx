@@ -138,6 +138,9 @@ export default function Wishes() {
               className="text-4xl md:text-5xl font-serif text-gray-800"
             >
               Message and Prayer
+              <div className="text-xl md:text-2xl font-serif text-gray-400">
+                (RSVP Section)
+              </div>
             </motion.h2>
 
             {/* Decorative Divider */}

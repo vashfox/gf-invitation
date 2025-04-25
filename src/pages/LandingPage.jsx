@@ -107,7 +107,7 @@ const LandingPage = ({ onOpenInvitation }) => (
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </motion.button>
 
-            <video loop autoPlay controls>
+            <video className="rounded-xl" loop autoPlay controls poster="./images/RLS-266.jpg">
               <source src="./images/savedd.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
