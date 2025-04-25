@@ -16,7 +16,9 @@ export default function Location() {
     <>
       {/* Location section */}
       <section id="location" className="min-h-screen relative overflow-hidden">
-        <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="bg-stl bg-stl-bottom bg-img-location absolute" />
+
+        <div className="container mx-auto px-4 py-20 pb-48 relative z-10">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,8 +140,27 @@ export default function Location() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="max-w-2xl mx-auto"
+              className="space-y-6"
             >
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6810983226856!2d125.04642129999999!3d7.046710499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f8fbb3ad1e13cf%3A0x3427c9d29fe28a8!2sThe%20White%20Barn%20-%20Kidapawan%20City!5e0!3m2!1sen!2sph!4v1745604401486!5m2!1sen!2sph"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                ></iframe>
+              </motion.div>
+
               <EventCards events={config.data.agenda} />
             </motion.div>
           </div>

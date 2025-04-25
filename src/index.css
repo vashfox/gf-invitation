@@ -135,6 +135,11 @@
   height: 30vh;
 }
 
+.bg-img-location {
+  background-image: url("/images/RLS-270.jpg");
+  height: 30vh;
+}
+
 .bg-img-landing-top:after {
   content: "";
   position: absolute;
@@ -155,7 +160,6 @@
   background: linear-gradient(to top, transparent 10%, white 80%);
 }
 
-.bg-img-gifts:after,
 .bg-img-event:after {
   content: "";
   position: absolute;
@@ -166,6 +170,7 @@
   background: linear-gradient(to top, white 0%, transparent 100%);
 }
 
+.bg-img-location:before,
 .bg-img-gifts:before,
 .bg-img-home-bot:before,
 .bg-img-event:before {
