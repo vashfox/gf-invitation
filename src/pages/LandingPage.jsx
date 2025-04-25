@@ -76,7 +76,7 @@ const LandingPage = ({ onOpenInvitation }) => (
           >
             <div className="space-y-2">
               <h1 className="text-1xl sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
-                We’ve saved a special seat just for you!
+                We’ve saved a special seat just for you! Reservation for one.
               </h1>
               <div className="h-px w-16 sm:w-24 mx-auto bg-yellow-200" />
             </div>
@@ -107,7 +107,7 @@ const LandingPage = ({ onOpenInvitation }) => (
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </motion.button>
 
-            <video loop autoPlay>
+            <video loop autoPlay controls>
               <source src="./images/savedd.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
