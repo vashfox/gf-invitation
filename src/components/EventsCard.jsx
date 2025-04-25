@@ -140,6 +140,7 @@ END:VCALENDAR`;
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
+        <img src="./images/whiteb.jpg" alt="Background" className="inset-0 w-full object-cover rounded-xl" />
         <div className="flex justify-between items-center">
           <h3 className="text-xl font-semibold text-gray-800">
             {eventData.title.split(" - ")[0]}

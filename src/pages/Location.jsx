@@ -69,7 +69,7 @@ export default function Location() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
+              className="w-full h-[200px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
             >
               <iframe
                 src={config.data.maps_embed}
@@ -92,6 +92,8 @@ export default function Location() {
               className="space-y-6"
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+        <img src="./images/ourladym.jpg" alt="Background" className="inset-0 w-full object-cover mb-2 rounded-xl" />
+                
                 <h3 className="text-2xl font-serif text-gray-800 mb-6">
                   {config.data.location}
                 </h3>
@@ -147,7 +149,7 @@ export default function Location() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
+                className="w-full h-[200px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
               >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6810983226856!2d125.04642129999999!3d7.046710499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f8fbb3ad1e13cf%3A0x3427c9d29fe28a8!2sThe%20White%20Barn%20-%20Kidapawan%20City!5e0!3m2!1sen!2sph!4v1745604401486!5m2!1sen!2sph"
