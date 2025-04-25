@@ -18,18 +18,10 @@ const config = {
     favicon: "/images/favicon.ico",
     agenda: [
       {
-        title: "Wedding Ceremony",
-        date: "2025-05-10",
-        startTime: "8:00 AM",
-        endTime: "11:00 AM",
-        location: "Our Lady Mediatrix of All Grace Cathedral",
-        address: "Quezon Blvd, Kidapawan City",
-      },
-      {
-        title: "Events Place",
+        title: "Events Place: The White Barn",
         date: "2025-05-10",
         startTime: "11:00 AM",
-        endTime: "02:00 PM",
+        endTime: "TBD",
         location: "The White Barn",
         address: "Purok Guava Sitio Mahayahay Brgy. Paco Kidapawan City",
       }

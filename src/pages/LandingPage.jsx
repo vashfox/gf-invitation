@@ -93,10 +93,10 @@ const LandingPage = ({ onOpenInvitation }) => (
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={onOpenInvitation}
-              className="group relative w-full bg-yellow-500 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-medium shadow-lg hover:bg-yellow-600 transition-all duration-200"
+              className="group relative w-full bg-yellow-500 mb-4 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-medium shadow-lg hover:bg-yellow-600 transition-all duration-200"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                <span>An Invitation with Your Name on It</span>
+                <span>View Your Special Invitation</span>
                 <motion.span
                   animate={{ x: [0, 4, 0] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
@@ -106,6 +106,12 @@ const LandingPage = ({ onOpenInvitation }) => (
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </motion.button>
+
+            <video loop autoPlay>
+              <source src="./images/savedd.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
           </motion.div>
         </div>
       </motion.div>
