@@ -118,23 +118,19 @@ export default function Events() {
           >
             <section className="bg-[#f9f5f0] py-10 px-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8">
-                Wedding Program
+                Wedding Program Overview
               </h2>
-              <div className="text-gray-500 text-center max-w-md mx-auto mb-8">
-                The ceremony will be held at an open-air venue, so we kindly
-                suggest wearing something light and comfortable.
-              </div>
-              <div className="max-w-xl mx-auto space-y-6">
+              <div className="max-w-xl mx-auto space-y-2">
                 {programItems.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="text-right text-[#a47551] font-semibold w-24">
+                    <div className="text-right text-[#a47551] font-semibold flex-none w-24">
                       {item.time}
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-lg font-medium text-[#5e473b]">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-400">
                         {item.description}
                       </p>
                     </div>
