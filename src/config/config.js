@@ -170,7 +170,8 @@ const config = {
           "Carmencita Into",
           "Clarizel Bulac",
           "Ana Fe Into",
-          "Thelma Asentista"
+          "Thelma Asentista",
+          "Fe Gumapac"
         ],
         ninong: [
           "Margarito Ratilla Sr.",
