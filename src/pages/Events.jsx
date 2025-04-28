@@ -173,12 +173,6 @@ export default function Events() {
               <div className="max-w-xl mx-auto space-y-2">
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
-                    <div
-                      key={`ninong`}
-                      className="text-right text-[#a47551] font-light"
-                    >
-                      Ninong
-                    </div>
                     {entourage.prinsipalSponsors.ninong.map((item, idx) => (
                       <div
                         key={`ninong-${idx}`}
@@ -189,9 +183,6 @@ export default function Events() {
                     ))}
                   </div>
                   <div className="flex-1">
-                    <div key={`ninang`} className="text-[#a47551] font-light ">
-                      Ninang
-                    </div>
                     {entourage.prinsipalSponsors.ninang.map((item, idx) => (
                       <div
                         key={`ninang-${idx}`}
