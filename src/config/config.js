@@ -12,7 +12,7 @@ const config = {
       "https://www.google.com/maps/place/Our+Lady+Mediatrix+of+All+Grace+Cathedral/data=!4m2!3m1!1s0x0:0xbefcc31c79f2b505?sa=X&ved=1t:2428&ictx=111",
     maps_embed:
       "https://www.google.com/maps?q=Our+Lady+Mediatrix+of+All+Grace+Cathedral&output=embed",
-    time: "8:00 AM - 2:00 PM",
+    time: "8:00 AM",
     location: "Our Lady Mediatrix of All Grace Cathedral",
     address: "Quezon Blvd, Kidapawan City",
     ogImage: "/images/og-image.jpg",
