@@ -92,8 +92,8 @@ export default function Hero() {
                     >
                         <Heart
                             className={`w-${Math.floor(Math.random() * 2) + 8} h-${Math.floor(Math.random() * 2) + 8} ${i % 3 === 0 ? 'text-yellow-400' :
-                                i % 3 === 1 ? 'text-amber-400' :
-                                    'text-red-400'
+                                i % 3 === 1 ? 'text-red-400' :
+                                    'text-yellow-400'
                                 }`}
                             fill="currentColor"
                         />

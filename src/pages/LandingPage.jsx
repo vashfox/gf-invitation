@@ -34,7 +34,7 @@ const LandingPage = ({ onOpenInvitation }) => (
             <span className="text-yellow-400 mx-2 sm:mx-3">&</span>
             {config.data.brideName}
           </h1>
-          <p className="text-center italic text-xs mb-4">
+          <p className="text-center italic mb-2">
             When the time is right, I the LORD<br />will make it happen.
             -<span className="text-xs">Isaiah 60:22</span>
           </p>
@@ -48,14 +48,14 @@ const LandingPage = ({ onOpenInvitation }) => (
             className="flex flex-row gap-4 mb-4 sm:mb-8 items-center justify-center"
           >
             <div className="inline-flex flex-col items-center space-y-1 bg-white/80 px-4 sm:px-6 py-2 sm:py-3 rounded-xl">
-              <Calendar className="w-5 h-5 text-yellow-400" />
+              {/* <Calendar className="w-5 h-5 text-yellow-400" /> */}
               <p className="text-gray-700 text-xs font-medium text-center">
                 {formatEventDate(config.data.date)}
               </p>
             </div>
 
             <div className="inline-flex flex-col items-center space-y-1 bg-white/80 px-4 sm:px-6 py-2 sm:py-3 rounded-xl">
-              <Clock className="w-5 h-5 text-yellow-400" />
+              {/* <Clock className="w-5 h-5 text-yellow-400" /> */}
               <p className="text-gray-700 text-xs font-medium text-center">
                 {config.data.time}
               </p>
@@ -70,8 +70,8 @@ const LandingPage = ({ onOpenInvitation }) => (
             className="text-center space-y-2"
           >
             <div className="space-y-2">
-              <h1 className="text-xs sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
-                We’ve saved a special seat just for you! Reservation for one.
+              <h1 className="sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
+                We’ve saved a special seat just for you!<br/>Reservation for one.
               </h1>
               {/* Top Decorative Line */}
           <div className="flex items-center justify-center gap-3 mb-4 sm:mb-8">
