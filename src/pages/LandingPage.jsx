@@ -35,11 +35,11 @@ const LandingPage = ({ onOpenInvitation }) => (
             {config.data.brideName}
           </h1>
           <p className="text-center text-sm italic mb-2">
-            When the time is right, I the LORD<br />will make it happen.
-            -<span className="text-xs">Isaiah 60:22</span>
+            When the time is right, I the LORD
+            <br />
+            will make it happen. -<span className="text-xs">Isaiah 60:22</span>
           </p>
 
-          
           {/* Date and Time */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -71,14 +71,16 @@ const LandingPage = ({ onOpenInvitation }) => (
           >
             <div className="space-y-2">
               <h1 className="text-sm font-serif text-gray-800 leading-tight">
-                We’ve saved a special seat just for you!<br/>Reservation for one.
+                We’ve saved a special seat just for you!
+                <br />
+                Reservation for one.
               </h1>
               {/* Top Decorative Line */}
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
-            <div className="w-2 h-2 rounded-full bg-yellow-300" />
-            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />    
-          </div>
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
+                <div className="w-2 h-2 rounded-full bg-yellow-300" />
+                <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
+              </div>
             </div>
           </motion.div>
 
@@ -96,26 +98,39 @@ const LandingPage = ({ onOpenInvitation }) => (
               className="group relative w-full bg-yellow-500 mb-4 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:bg-yellow-600 transition-all duration-200"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                <span>View Your Special Invitation</span>
-                <motion.span
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    // rotate: [0, 5, -5, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 >
-                  →
-                </motion.span>
+                  <span>View Your Special Invitation</span>&nbsp;
+                  <span>→</span>
+                </motion.div>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </motion.button>
 
-            <video className="rounded-xl" loop controls poster="./images/RLS-266.jpg">
+            <video
+              className="rounded-xl"
+              loop
+              controls
+              poster="./images/RLS-266.jpg"
+            >
               <source src="./images/savedd.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-
           </motion.div>
         </div>
 
-        <p className="text-center italic text-xs mt-4 font-bold text-[#4d4d4d] box-shadow">VFox Invitatio™</p>
+        <p className="text-center italic text-xs mt-4 font-bold text-[#4d4d4d] box-shadow">
+          VFox Invitatio™
+        </p>
       </motion.div>
     </div>
   </motion.div>
