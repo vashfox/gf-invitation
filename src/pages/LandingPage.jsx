@@ -28,13 +28,13 @@ const LandingPage = ({ onOpenInvitation }) => (
         className="w-full max-w-md"
       >
         {/* Card Container */}
-        <div className="backdrop-blur-sm bg-white/50 px-4 py-4 pt-2 sm:p-8 md:p-10 rounded-2xl border border-yellow-100/50 shadow-xl">
-          <h1 className="pinyon-script-regular text-5xl sm:text-4xl md:text-5xl font-serif text-center text-gray-800 leading-tight font-black">
+        <div className="backdrop-blur-sm bg-white/50 px-2 py-2 pt-2 rounded-2xl border border-yellow-100/50 shadow-xl">
+          <h1 className="pinyon-script-regular text-5xl font-serif text-center text-gray-800 leading-tight font-black">
             {config.data.groomName}
             <span className="text-yellow-400 mx-2 sm:mx-3">&</span>
             {config.data.brideName}
           </h1>
-          <p className="text-center italic mb-2">
+          <p className="text-center text-sm italic mb-2">
             When the time is right, I the LORD<br />will make it happen.
             -<span className="text-xs">Isaiah 60:22</span>
           </p>
@@ -45,7 +45,7 @@ const LandingPage = ({ onOpenInvitation }) => (
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-row gap-4 mb-4 sm:mb-8 items-center justify-center"
+            className="flex flex-row gap-4 mb-4 items-center justify-center"
           >
             <div className="inline-flex flex-col items-center space-y-1 bg-white/80 px-4 sm:px-6 py-2 sm:py-3 rounded-xl">
               {/* <Calendar className="w-5 h-5 text-yellow-400" /> */}
@@ -70,11 +70,11 @@ const LandingPage = ({ onOpenInvitation }) => (
             className="text-center space-y-2"
           >
             <div className="space-y-2">
-              <h1 className="sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
+              <h1 className="text-sm font-serif text-gray-800 leading-tight">
                 We’ve saved a special seat just for you!<br/>Reservation for one.
               </h1>
               {/* Top Decorative Line */}
-          <div className="flex items-center justify-center gap-3 mb-4 sm:mb-8">
+          <div className="flex items-center justify-center gap-3 mb-2">
             <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
             <div className="w-2 h-2 rounded-full bg-yellow-300" />
             <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
@@ -93,7 +93,7 @@ const LandingPage = ({ onOpenInvitation }) => (
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={onOpenInvitation}
-              className="group relative w-full bg-yellow-500 mb-4 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-medium shadow-lg hover:bg-yellow-600 transition-all duration-200"
+              className="group relative w-full bg-yellow-500 mb-4 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:bg-yellow-600 transition-all duration-200"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <span>View Your Special Invitation</span>
