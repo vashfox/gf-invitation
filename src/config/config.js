@@ -141,7 +141,7 @@ const config = {
         "Patricia Claro",
         "Lady Lee Sibonga",
       ],
-      bestman: "Bryan Carl Asentiista",
+      bestman: "Bryan Carl Asentista",
       groomsmen: [
         "Jan Michael Garcia",
         "Carl Dexter Asentista",
