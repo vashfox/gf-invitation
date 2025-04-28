@@ -210,6 +210,10 @@ const config = {
         },
         {
           name: "Sibonga's Bakeshop",
+          logo: "/images/f4.png",
+        },
+        {
+          name: "Flourish",
           logo: "/images/f1.png",
         },
       ],

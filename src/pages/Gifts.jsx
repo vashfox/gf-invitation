@@ -1,5 +1,6 @@
+import Marquee from "@/components/ui/marquee";
 import config from "@/config/config";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Copy, Gift, CheckCircle, Wallet, Building2 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -103,6 +104,44 @@ export default function Gifts() {
               <div className="h-px w-8 bg-yellow-200/50" />
             </motion.div>
           </motion.div>
+
+          {/* Wishes List */}
+          <p className="inline-block text-yellow-500">
+                  Thank you to our spronsors:
+                </p>
+          <div className="max-w-2xl mx-auto mt-2 mb-4 space-y-6">
+            <AnimatePresence>
+              <Marquee
+                speed={10}
+                gradient={"false"}
+                className="[--duration:10s] py-2"
+              >
+                {config.data.entourage.credits.map((credit, index) => (
+                  <motion.div
+                    key={credit}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group relative w-[280px]"
+                  >
+                    <div className="relative backdrop-blur-sm bg-[#f9f5f0] p-4 rounded-xl min-h-full">
+                      <img
+                        src={credit.logo}
+                        alt={credit.name}
+                        className="credits h-20 mx-auto mb-2"
+                      />
+                      <div className="text-center">
+                        <i className="text-xs text-gray-300">Credits to</i>
+                        <br />
+                        {credit.name}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </Marquee>
+            </AnimatePresence>
+          </div>
 
           {/* Bank Accounts Grid */}
           <div className="max-w-2xl mx-auto grid gap-6">
