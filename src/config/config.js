@@ -170,7 +170,6 @@ const config = {
           "Carmencita Into",
           "Clarizel Bulac",
           "Ana Fe Into",
-          "Thelma Asentista",
           "Fe Gumapac",
           "Marisyl Agno"
         ],
@@ -195,6 +194,7 @@ const config = {
           "Gio Vanni Tolibas",
           "Lou Bulac",
           "Anabelle Into",
+          "Thelma Asentista",
           "Renan Agno"
         ],
       },
