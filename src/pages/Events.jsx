@@ -219,7 +219,7 @@ export default function Events() {
               </h2>
               <div className="max-w-xl mx-auto space-y-2">
                 <div className="flex flex-col justify-center items-start gap-4">
-                  <div className="w-[100%] flex text-right text-sm text-[#a47551] font-semibold gap-4">
+                  <div className="w-[100%] flex text-right text-sm text-[#a47551] gap-4">
                     <span className="flex-1 underline-offset-4 py-1">
                       To Light Our Path
                     </span>
@@ -227,7 +227,7 @@ export default function Events() {
                       {entourage.secondarySponsors.candle.map((item, idx) => (
                         <div
                           key={`men-${idx}`}
-                          className="text-[#a47551] text-lg font-bold"
+                          className="text-[#a47551] font-semibold"
                         >
                           {item}
                         </div>
@@ -235,7 +235,7 @@ export default function Events() {
                     </div>
                   </div>
 
-                  <div className="w-[100%] flex text-right text-sm text-[#a47551] font-semibold gap-4">
+                  <div className="w-[100%] flex text-right text-sm text-[#a47551] gap-4">
                     <span className="flex-1 underline-offset-4 py-1">
                       To Bind Us Together
                     </span>
@@ -243,7 +243,7 @@ export default function Events() {
                       {entourage.secondarySponsors.cord.map((item, idx) => (
                         <div
                           key={`men-${idx}`}
-                          className="text-[#a47551] font-bold text-lg"
+                          className="text-[#a47551] font-semibold"
                         >
                           {item}
                         </div>
@@ -251,13 +251,13 @@ export default function Events() {
                     </div>
                   </div>
 
-                  <div className="w-[100%] flex align-center text-right text-sm text-[#a47551] font-semibold gap-4">
+                  <div className="w-[100%] flex align-center text-right text-sm text-[#a47551] gap-4">
                     <span className="flex-1 underline-offset-4 py-1">To Clothe Us One</span>
                     <div className="flex-1 text-left">
                       {entourage.secondarySponsors.veil.map((item, idx) => (
                         <div
                           key={`men-${idx}`}
-                          className="text-[#a47551] text-lg font-bold"
+                          className="text-[#a47551] font-semibold"
                         >
                           {item}
                         </div>
