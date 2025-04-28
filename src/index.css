@@ -183,7 +183,6 @@
 
 .bg-img-wishes:before,
 .bg-img-location:before,
-.bg-img-gifts:before,
 .bg-img-home-bot:before,
 .bg-img-event:before {
   content: "";
@@ -192,6 +191,16 @@
   left: 0;
   width: 100%;
   height: 10vh;
+  background: linear-gradient(to bottom, white 0%, transparent 100%);
+}
+
+.bg-img-gifts:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh;
   background: linear-gradient(to bottom, white 0%, transparent 100%);
 }
 
