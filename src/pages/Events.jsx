@@ -218,45 +218,51 @@ export default function Events() {
                 Secondary Sponsors
               </h2>
               <div className="max-w-xl mx-auto space-y-2">
-                <div className="flex flex-wrap justify-center items-start gap-4">
-                  <div className="flex-none w-1/2 text-center text-sm text-[#a47551] font-semibold">
-                    <span className="underline-offset-4">
-                      To light our path
+                <div className="flex flex-col justify-center items-start gap-4">
+                  <div className="w-[100%] flex text-right text-sm text-[#a47551] font-semibold gap-4">
+                    <span className="flex-1 underline-offset-4 py-1">
+                      To Light Our Path
                     </span>
-                    {entourage.secondarySponsors.candle.map((item, idx) => (
-                      <div
-                        key={`men-${idx}`}
-                        className="text-[#a47551] font-bold"
-                      >
-                        {item}
-                      </div>
-                    ))}
+                    <div className="flex-1 text-left">
+                      {entourage.secondarySponsors.candle.map((item, idx) => (
+                        <div
+                          key={`men-${idx}`}
+                          className="text-[#a47551] text-lg font-bold"
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="flex-none w-1/2 text-center text-sm text-[#a47551] font-semibold">
-                    <span className="underline-offset-4">To clothe us one</span>
-                    {entourage.secondarySponsors.veil.map((item, idx) => (
-                      <div
-                        key={`men-${idx}`}
-                        className="text-[#a47551] font-bold"
-                      >
-                        {item}
-                      </div>
-                    ))}
+                  <div className="w-[100%] flex text-right text-sm text-[#a47551] font-semibold gap-4">
+                    <span className="flex-1 underline-offset-4 py-1">
+                      To Bind Us Together
+                    </span>
+                    <div className="flex-1 text-left">
+                      {entourage.secondarySponsors.cord.map((item, idx) => (
+                        <div
+                          key={`men-${idx}`}
+                          className="text-[#a47551] font-bold text-lg"
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="flex-none w-1.2 text-center text-sm text-[#a47551] font-semibold">
-                    <span className="underline-offset-4">
-                      To bind us together
-                    </span>
-                    {entourage.secondarySponsors.cord.map((item, idx) => (
-                      <div
-                        key={`men-${idx}`}
-                        className="text-[#a47551] font-bold"
-                      >
-                        {item}
-                      </div>
-                    ))}
+                  <div className="w-[100%] flex align-center text-right text-sm text-[#a47551] font-semibold gap-4">
+                    <span className="flex-1 underline-offset-4 py-1">To Clothe Us One</span>
+                    <div className="flex-1 text-left">
+                      {entourage.secondarySponsors.veil.map((item, idx) => (
+                        <div
+                          key={`men-${idx}`}
+                          className="text-[#a47551] text-lg font-bold"
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -277,9 +283,13 @@ export default function Events() {
               <div className="max-w-xl mx-auto space-y-2">
                 <div className="flex items-start gap-4">
                   <div className="flex-1 text-left text-sm text-[#a47551] font-bold">
-                    <p className="font-semibold mb-2 text-[#5e473b]">Best Man</p>
+                    <p className="font-semibold mb-2 text-[#5e473b] underline">
+                      Best Man
+                    </p>
                     {entourage.bestman}
-                    <p className="font-semibold mt-4 mb-2 text-[#5e473b]">Groomsmen</p>
+                    <p className="font-semibold mt-4 mb-2 text-[#5e473b] underline">
+                      Groomsmen
+                    </p>
                     {entourage.groomsmen.map((item, idx) => (
                       <div
                         key={`men-${idx}`}
@@ -290,9 +300,13 @@ export default function Events() {
                     ))}
                   </div>
                   <div className="flex-1 text-right text-sm text-[#a47551] font-bold">
-                    <p className="font-semibold mb-2 text-[#5e473b]">Maid of Honor</p>
+                    <p className="font-semibold mb-2 text-[#5e473b] underline">
+                      Maid of Honor
+                    </p>
                     {entourage.maideofhonor}
-                    <p className="font-semibold mt-4 mb-2 text-[#5e473b]">Bridesmaid</p>
+                    <p className="font-semibold mt-4 mb-2 text-[#5e473b] underline">
+                      Bridesmaid
+                    </p>
                     {entourage.bridesmaids.map((item, idx) => (
                       <div
                         key={`women-${idx}`}

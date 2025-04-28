@@ -169,7 +169,6 @@ const config = {
           "Flora May Pancho",
           "Carmencita Into",
           "Clarizel Bulac",
-          "Annabelle Into",
           "Ana Fe Into",
         ],
         ninong: [
@@ -192,6 +191,7 @@ const config = {
           "Alvin Mibalo",
           "Gio Vanni Tolibas",
           "Lou Bulac",
+          "Annabelle Into",
         ],
       },
       secondarySponsors: {
