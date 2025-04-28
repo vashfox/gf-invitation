@@ -114,6 +114,8 @@ const LandingPage = ({ onOpenInvitation }) => (
 
           </motion.div>
         </div>
+
+        <p className="text-center italic text-xs mt-4 font-bold text-[#4d4d4d] box-shadow">VFox Invitatio™</p>
       </motion.div>
     </div>
   </motion.div>
