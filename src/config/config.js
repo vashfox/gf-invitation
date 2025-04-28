@@ -197,7 +197,7 @@ const config = {
       secondarySponsors: {
         candle: ["Jayson Aro", "Jessa Aro"],
         veil: ["Kenneth Ratilla", "Karen Ratilla"],
-        cord: ["Neil Adrian Villegas", "Earl Villegas"],
+        cord: ["Neil Adrian Villegas", "Earlynne Villegas"],
       },
       credits: [
         {
