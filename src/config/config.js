@@ -171,7 +171,8 @@ const config = {
           "Clarizel Bulac",
           "Ana Fe Into",
           "Thelma Asentista",
-          "Fe Gumapac"
+          "Fe Gumapac",
+          "Marisyl Agno"
         ],
         ninong: [
           "Margarito Ratilla Sr.",
@@ -194,6 +195,7 @@ const config = {
           "Gio Vanni Tolibas",
           "Lou Bulac",
           "Anabelle Into",
+          "Renan Agno"
         ],
       },
       secondarySponsors: {
