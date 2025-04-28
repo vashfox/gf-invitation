@@ -146,7 +146,7 @@ const config = {
         "Jan Michael Garcia",
         "Carl Dexter Asentista",
         "Carlito Asentista III",
-        "Jun Paa Jr.",
+        "Alfonso Paa Jr.",
       ],
       prinsipalSponsors: {
         ninang: [
