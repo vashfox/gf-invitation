@@ -77,7 +77,7 @@ const LandingPage = ({ onOpenInvitation }) => (
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
             <div className="w-2 h-2 rounded-full bg-yellow-300" />
-            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
+            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />    
           </div>
             </div>
           </motion.div>

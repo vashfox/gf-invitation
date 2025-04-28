@@ -124,11 +124,11 @@ export default function Events() {
               <div className="max-w-xl mx-auto space-y-2">
                 {programItems.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="text-right text-[#a47551] flex-none w-24">
+                    <div className="font-light text-sm text-right text-[#a47551] flex-none w-24">
                       {item.time}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-light text-[#5e473b]">
+                      <h3 className="font-light text-sm text-[#5e473b]">
                         {item.title}
                       </h3>
                       {/* <p className="text-sm text-gray-400">
