@@ -29,7 +29,7 @@ export default function Gifts() {
             initial={{ opacity: 0, y: 20 }}
             animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-4 mb-10"
           >
             <motion.span
               initial={{ opacity: 0, y: 10 }}
@@ -69,25 +69,24 @@ export default function Gifts() {
               className="space-y-4 max-w-md mx-auto"
             >
               {/* Arabic InsyaAllah */}
-              <p className="font-arabic text-xl text-gray-800">
+              {/* <p className="font-arabic text-xl text-gray-800">
                 As destined, we will meet under His perfect timing.
-              </p>
+              </p> */}
 
               {/* Main Message */}
-              <p className="text-gray-600 leading-relaxed">
-                With deep gratitude, your support will help us build our future
-                — and give back to the ministry that helped shape our faith.
-              </p>
+              <p className="text-gray-600 italic leading-relaxed"></p>
 
               {/* Arabic Dua */}
               <div className="space-y-2">
+                <p className="text-gray-600 italic ">
+                  With deep gratitude, your support will help us build our
+                  future — and give back to the ministry that helped shape our
+                  faith. We are deeply grateful — may the Lord return your
+                  kindness a hundredfold.
+                </p>
                 <p className="font-arabic text-lg text-gray-800">
                   "Dako kaayo among pasalamat — hinaut nga balosan sa Ginoo ang
                   inyong kaayo sa usa ka gatus ka pilo."
-                </p>
-                <p className="text-gray-600 italic text-sm">
-                  We are deeply grateful — may the Lord return your kindness a
-                  hundredfold.
                 </p>
               </div>
             </motion.div>
@@ -116,7 +115,7 @@ export default function Gifts() {
                 className="relative group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/50 to-amber-100/50 rounded-2xl transform transition-transform group-hover:scale-105 duration-300" />
-                <div className="relative backdrop-blur-sm bg-white/80 p-6 rounded-2xl border border-yellow-100/50 shadow-lg">
+                <div className="relative backdrop-blur-sm bg-[#f9f5f0] p-6 rounded-2xl border-yellow-100/50 shadow-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 rounded-lg bg-white p-2 shadow-sm">
@@ -135,7 +134,7 @@ export default function Gifts() {
                   </div>
 
                   <div className="mt-4">
-                    <div className="flex items-center justify-between bg-gray-50/80 px-4 py-3 rounded-lg">
+                    <div className="flex items-center justify-between bg-gray-50/50 px-4 py-3 rounded-lg">
                       <p className="font-mono text-gray-700">
                         {account.accountNumber}
                       </p>

@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function Events() {
   const [programItems, setProgram] = useState(config.data.programSequence);
+  const [entourage, setEntourage] = useState(config.data.entourage);
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function Events() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-4 mb-4"
           >
             <motion.span
               initial={{ opacity: 0, y: 10 }}
@@ -80,7 +81,7 @@ export default function Events() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-w-2xl mx-auto my-8"
+            className="max-w-2xl mx-auto mb-8 mt-2"
           >
             <div className="text-3xl text-center md:text-4xl font-serif text-gray-800">
               Dress Code
@@ -114,28 +115,194 @@ export default function Events() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-w-2xl mx-auto my-8"
+            className="max-w-2xl mx-auto my-8 rounded-xl"
           >
-            <section className="bg-[#f9f5f0] py-10 px-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8">
+            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+              <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8">
                 Wedding Program Overview
               </h2>
               <div className="max-w-xl mx-auto space-y-2">
                 {programItems.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="text-right text-[#a47551] font-semibold flex-none w-24">
+                    <div className="text-right text-[#a47551] flex-none w-24">
                       {item.time}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-medium text-[#5e473b]">
+                      <h3 className="text-lg font-light text-[#5e473b]">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-400">
+                      {/* <p className="text-sm text-gray-400">
                         {item.description}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 ))}
+              </div>
+            </section>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="max-w-2xl mx-auto my-8"
+          >
+            <div className="text-3xl text-center md:text-4xl font-serif text-gray-800 mb-4">
+              Bridal Entourage
+            </div>
+
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="flex items-center justify-center gap-4 mb-6"
+            >
+              <div className="h-[1px] w-12 bg-yellow-200" />
+              <div className="text-yellow-400">
+                <Heart className="w-4 h-4" fill="currentColor" />
+              </div>
+              <div className="h-[1px] w-12 bg-yellow-200" />
+            </motion.div>
+
+            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+              <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8 rounded-sm">
+                Principal Sponsors
+              </h2>
+              <div className="max-w-xl mx-auto space-y-2">
+                <div className="flex items-start gap-4">
+                  <div className="flex-1">
+                    <div
+                      key={`ninong`}
+                      className="text-right text-[#a47551] font-light"
+                    >
+                      Ninong
+                    </div>
+                    {entourage.prinsipalSponsors.ninong.map((item, idx) => (
+                      <div
+                        key={`ninong-${idx}`}
+                        className="text-right text-[#a47551] font-semibold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex-1">
+                    <div key={`ninang`} className="text-[#a47551] font-light ">
+                      Ninang
+                    </div>
+                    {entourage.prinsipalSponsors.ninang.map((item, idx) => (
+                      <div
+                        key={`ninang-${idx}`}
+                        className="text-[#a47551] font-semibold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="max-w-2xl mx-auto my-8"
+          >
+            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+              <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8 rounded-sm">
+                Secondary Sponsors
+              </h2>
+              <div className="max-w-xl mx-auto space-y-2">
+                <div className="flex flex-wrap justify-center items-start gap-4">
+                  <div className="flex-none w-1/2 text-center text-sm text-[#a47551] font-semibold">
+                    <span className="underline-offset-4">
+                      To light our path
+                    </span>
+                    {entourage.secondarySponsors.candle.map((item, idx) => (
+                      <div
+                        key={`men-${idx}`}
+                        className="text-[#a47551] font-bold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex-none w-1/2 text-center text-sm text-[#a47551] font-semibold">
+                    <span className="underline-offset-4">To clothe us one</span>
+                    {entourage.secondarySponsors.veil.map((item, idx) => (
+                      <div
+                        key={`men-${idx}`}
+                        className="text-[#a47551] font-bold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex-none w-1.2 text-center text-sm text-[#a47551] font-semibold">
+                    <span className="underline-offset-4">
+                      To bind us together
+                    </span>
+                    {entourage.secondarySponsors.cord.map((item, idx) => (
+                      <div
+                        key={`men-${idx}`}
+                        className="text-[#a47551] font-bold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="max-w-2xl mx-auto my-8"
+          >
+            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+              <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8 rounded-sm">
+                To assist us in our needs
+              </h2>
+              <div className="max-w-xl mx-auto space-y-2">
+                <div className="flex items-start gap-4">
+                  <div className="flex-1 text-left text-sm text-[#a47551] font-bold">
+                    <p className="font-semibold mb-2 text-[#5e473b]">Best Man</p>
+                    {entourage.bestman}
+                    <p className="font-semibold mt-4 mb-2 text-[#5e473b]">Groomsmen</p>
+                    {entourage.groomsmen.map((item, idx) => (
+                      <div
+                        key={`men-${idx}`}
+                        className="text-[#a47551] text-sm font-semibold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex-1 text-right text-sm text-[#a47551] font-bold">
+                    <p className="font-semibold mb-2 text-[#5e473b]">Maid of Honor</p>
+                    {entourage.maideofhonor}
+                    <p className="font-semibold mt-4 mb-2 text-[#5e473b]">Bridesmaid</p>
+                    {entourage.bridesmaids.map((item, idx) => (
+                      <div
+                        key={`women-${idx}`}
+                        className="text-[#a47551] text-sm font-semibold"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </section>
           </motion.div>

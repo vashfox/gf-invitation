@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Confetti from "react-confetti";
+import config from "@/config/config";
 import Marquee from "@/components/ui/marquee";
 import {
   Calendar,
@@ -45,7 +46,7 @@ export default function Wishes() {
     let { data: invitationMessages } = await supabase
       .from("invitationMessages")
       .select("*")
-      .eq('visibility', true);
+      .eq("visibility", true);
     setWishes(invitationMessages);
   }
 
@@ -70,11 +71,11 @@ export default function Wishes() {
       .insert([newWishObj])
       .select();
 
-    if(error) {
-        alert("Please try again submitting your response & message.");
-        console.error("Error inserting new wish:", error);
-        setIsSubmitting(false);
-        return;
+    if (error) {
+      alert("Please try again submitting your response & message.");
+      console.error("Error inserting new wish:", error);
+      setIsSubmitting(false);
+      return;
     }
 
     // setWishes((prev) => [data[0], ...prev]);
@@ -111,10 +112,10 @@ export default function Wishes() {
 
   return (
     <>
+      <div className="bg-stl bg-stl-bottom bg-img-wishes absolute" />
       <section id="wishes" className="min-h-screen relative overflow-hidden">
         {showConfetti && <Confetti recycle={false} numberOfPieces={200} />}
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          
+        <div className="container mx-auto px-4 py-20 relative z-10 mb-4">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,31 +157,120 @@ export default function Wishes() {
             </motion.div>
           </motion.div>
 
+          {/* Wishes List */}
+          <div className="max-w-2xl mx-auto mt-2 space-y-6">
+            <AnimatePresence>
+              <Marquee
+                speed={30}
+                gradient={"false"}
+                className="[--duration:30s] py-2"
+              >
+                {wishes.map((wish, index) => (
+                  <motion.div
+                    key={wish.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group relative w-[280px]"
+                  >
+                    {/* Background gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/50 to-amber-100/50 rounded-xl transform transition-transform group-hover:scale-[1.02] duration-300" />
+
+                    {/* Card content */}
+                    <div className="relative backdrop-blur-sm bg-white/80 p-4 rounded-xl border border-yellow-100/50 shadow-md min-h-full">
+                      {/* Header */}
+                      <div className="flex items-start space-x-3 mb-2">
+                        {/* Avatar */}
+                        <div className="flex-shrink-0">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-amber-400 flex items-center justify-center text-white text-sm font-medium">
+                            {wish.name[0].toUpperCase()}
+                          </div>
+                        </div>
+
+                        {/* Name, Time, and Attendance */}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center space-x-2">
+                            <h4 className="font-medium text-gray-800 text-sm truncate">
+                              {wish.name}
+                            </h4>
+                            {getAttendanceIcon(wish.joining)}
+                          </div>
+                          <div className="flex items-center space-x-1 text-gray-500 text-xs">
+                            <Clock className="w-3 h-3" />
+                            <time className="truncate">
+                              {formatEventDate(wish.created_at)}
+                            </time>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Message */}
+                      <p className="text-gray-600 text-sm leading-relaxed mb-2 line-clamp-3">
+                        {wish.message}
+                      </p>
+
+                      {/* Optional: Time indicator for recent messages */}
+                      {Date.now() - new Date(wish.created_at).getTime() <
+                        3600000 && (
+                        <div className="absolute top-2 right-2">
+                          <span className="px-2 py-1 rounded-full bg-yellow-100 text-yellow-600 text-xs font-medium">
+                            New
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </Marquee>
+            </AnimatePresence>
+          </div>
+
+          {/* Wishes List */}
+          <div className="max-w-2xl mx-auto mt-2 space-y-6">
+            <AnimatePresence>
+              <Marquee
+                speed={10}
+                gradient={"false"}
+                className="[--duration:10s] py-2"
+              >
+                {config.data.entourage.credits.map((credit, index) => (
+                  <motion.div
+                    key={credit}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group relative w-[280px]"
+                  >
+                    <div className="relative backdrop-blur-sm bg-[#f9f5f0] p-4 rounded-xl min-h-full">
+                      <div className="text-center">
+                        <i className="text-xs text-gray-300">Credits to</i><br/>
+                        {credit}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </Marquee>
+            </AnimatePresence>
+          </div>
+
           {/* Wishes Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="max-w-2xl mx-auto mt-12"
+            className="max-w-2xl mx-auto mt-4 mb-10"
           >
-            <form onSubmit={handleSubmitWish} className="relative">
-              <div className="backdrop-blur-sm bg-white/80 p-6 rounded-2xl border border-yellow-100/50 shadow-lg">
+            <form onSubmit={handleSubmitWish} className="relative ">
+              <div className="backdrop-blur-sm p-6 rounded-2xl border-yellow-100/50 shadow-lg bg-[#f9f5f0]">
                 <div className="space-y-2">
                   {/* Name Input */}
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2 text-gray-500 text-sm mb-1">
                       <User className="w-4 h-4" />
-                      <span>Guest Name</span>
+                      <span>Guest Name: <b>{guestName || "Guest"}</b></span>
                     </div>
-                    <input
-                      type="text"
-                      value={guestName}
-                      onChange={(e) => setGuestName(e.target.value)}
-                      placeholder="Kindly write your name..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-white/50 border border-yellow-100 focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 transition-all duration-200 text-gray-700 placeholder-gray-400"
-                      required
-                      disabled
-                    />
                   </div>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -197,7 +287,7 @@ export default function Wishes() {
                     <button
                       type="button"
                       onClick={() => setIsOpen(!isOpen)}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white/50 border border-yellow-100 focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 transition-all duration-200 text-left flex items-center justify-between"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white/90 border-yellow-100 focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 transition-all duration-200 text-left flex items-center justify-between"
                     >
                       <span
                         className={
@@ -263,7 +353,7 @@ export default function Wishes() {
                       value={newWish}
                       onChange={(e) => setNewWish(e.target.value)}
                       placeholder="Send your wishes and prayers for the bride and groom..."
-                      className="w-full h-32 p-4 rounded-xl bg-white/50 border border-yellow-100 focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 resize-none transition-all duration-200"
+                      className="w-full h-32 p-4 rounded-xl bg-white/90 border-yellow-100 focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 resize-none transition-all duration-200"
                       required
                     />
                   </div>
@@ -296,75 +386,6 @@ export default function Wishes() {
               </div>
             </form>
           </motion.div>
-
-          {/* Wishes List */}
-          <div className="max-w-2xl mx-auto mt-10 space-y-6">
-            <AnimatePresence>
-              <Marquee
-                speed={30}
-                gradient={"false"}
-                className="[--duration:20s] py-2"
-              >
-                {wishes.map((wish, index) => (
-                  <motion.div
-                    key={wish.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group relative w-[280px]"
-                  >
-                    {/* Background gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/50 to-amber-100/50 rounded-xl transform transition-transform group-hover:scale-[1.02] duration-300" />
-
-                    {/* Card content */}
-                    <div className="relative backdrop-blur-sm bg-white/80 p-4 rounded-xl border border-yellow-100/50 shadow-md min-h-full">
-                      {/* Header */}
-                      <div className="flex items-start space-x-3 mb-2">
-                        {/* Avatar */}
-                        <div className="flex-shrink-0">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-amber-400 flex items-center justify-center text-white text-sm font-medium">
-                            {wish.name[0].toUpperCase()}
-                          </div>
-                        </div>
-
-                        {/* Name, Time, and Attendance */}
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center space-x-2">
-                            <h4 className="font-medium text-gray-800 text-sm truncate">
-                              {wish.name}
-                            </h4>
-                            {getAttendanceIcon(wish.joining)}
-                          </div>
-                          <div className="flex items-center space-x-1 text-gray-500 text-xs">
-                            <Clock className="w-3 h-3" />
-                            <time className="truncate">
-                              {formatEventDate(wish.created_at)}
-                            </time>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Message */}
-                      <p className="text-gray-600 text-sm leading-relaxed mb-2 line-clamp-3">
-                        {wish.message}
-                      </p>
-
-                      {/* Optional: Time indicator for recent messages */}
-                      {Date.now() - new Date(wish.created_at).getTime() <
-                        3600000 && (
-                        <div className="absolute top-2 right-2">
-                          <span className="px-2 py-1 rounded-full bg-yellow-100 text-yellow-600 text-xs font-medium">
-                            New
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </motion.div>
-                ))}
-              </Marquee>
-            </AnimatePresence>
-          </div>
         </div>
       </section>
     </>

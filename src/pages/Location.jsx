@@ -16,7 +16,7 @@ export default function Location() {
     <>
       {/* Location section */}
       <section id="location" className="min-h-screen relative overflow-hidden">
-      <div className="bg-stl bg-stl-bottom bg-img-location absolute" />
+        <div className="bg-stl bg-stl-bottom bg-img-location absolute" />
 
         <div className="container mx-auto px-4 py-20 pb-48 relative z-10">
           {/* Section Header */}
@@ -25,7 +25,7 @@ export default function Location() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-4 mb-8"
           >
             <motion.span
               initial={{ opacity: 0, y: 10 }}
@@ -53,7 +53,7 @@ export default function Location() {
               whileInView={{ scale: 1 }}
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center gap-4 pt-4"
+              className="flex items-center justify-center gap-4 pt-2"
             >
               <div className="h-[1px] w-12 bg-yellow-200" />
               <MapPin className="w-5 h-5 text-yellow-400" />
@@ -63,26 +63,6 @@ export default function Location() {
 
           {/* Location Content */}
           <div className="max-w-6xl mx-auto grid md:grid-row-2 gap-8 items-center">
-            {/* Map Container */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="w-full h-[200px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
-            >
-              <iframe
-                src={config.data.maps_embed}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
-              ></iframe>
-            </motion.div>
-
             {/* Venue Details */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -91,9 +71,13 @@ export default function Location() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <img src="./images/ourladym.jpg" alt="Background" className="inset-0 w-full object-cover mb-2 rounded-xl" />
-                
+              <div className="bg-[#f9f5f0] rounded-2xl p-4 shadow-lg border border-gray-100">
+                <img
+                  src="./images/ourladym.jpg"
+                  alt="Background"
+                  className="inset-0 w-full object-cover mb-2 rounded-xl"
+                />
+
                 <h3 className="text-2xl font-serif text-gray-800 mb-6">
                   {config.data.location}
                 </h3>
@@ -133,6 +117,26 @@ export default function Location() {
                       <span className="font-semibold">View Map</span>
                     </motion.a>
                   </div>
+
+                  {/* Map Container */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="w-full h-[200px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
+                  >
+                    <iframe
+                      src={config.data.maps_embed}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full h-full"
+                    ></iframe>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
@@ -144,25 +148,6 @@ export default function Location() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-6"
             >
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="w-full h-[200px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
-              >
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6810983226856!2d125.04642129999999!3d7.046710499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f8fbb3ad1e13cf%3A0x3427c9d29fe28a8!2sThe%20White%20Barn%20-%20Kidapawan%20City!5e0!3m2!1sen!2sph!4v1745604401486!5m2!1sen!2sph"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
-                ></iframe>
-              </motion.div>
-
               <EventCards events={config.data.agenda} />
             </motion.div>
           </div>

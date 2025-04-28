@@ -9,6 +9,12 @@
   overflow: hidden;
 }
 
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -140,6 +146,11 @@
   height: 30vh;
 }
 
+.bg-img-wishes {
+  background-image: url("/images/RLS-247.jpg");
+  height: 30vh;
+}
+
 .bg-img-landing-top:after {
   content: "";
   position: absolute;
@@ -170,6 +181,7 @@
   background: linear-gradient(to top, white 0%, transparent 100%);
 }
 
+.bg-img-wishes:before,
 .bg-img-location:before,
 .bg-img-gifts:before,
 .bg-img-home-bot:before,

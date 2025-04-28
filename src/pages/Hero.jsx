@@ -52,7 +52,7 @@ export default function Hero() {
                         key={interval}
                         initial={{ scale: 0.5, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-yellow-100"
+                        className="flex flex-col items-center p-3 bg-[#f9f5f0] backdrop-blur-sm rounded-xl border-yellow-100"
                     >
                         <span className="text-xl sm:text-2xl font-bold text-yellow-600">
                             {timeLeft[interval]}
@@ -113,7 +113,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="space-y-6 relative z-10"
+                    className="space-y-2 relative z-10"
                 >
                     <motion.div
                         initial={{ scale: 0 }}
@@ -121,7 +121,7 @@ export default function Hero() {
                         transition={{ delay: 0.2 }}
                         className="inline-block mx-auto"
                     >
-                        <span className="px-4 py-1 text-sm bg-yellow-50 text-yellow-600 rounded-full border border-yellow-200">
+                        <span className="px-4 py-1 text-sm bg-[#f9f5f0] text-yellow-600 rounded-full border-yellow-200">
                         A Date to Remember — Our Wedding Day
                         </span>
                     </motion.div>
@@ -131,7 +131,7 @@ export default function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4 }}
-                            className="text-gray-500 font-light italic text-base sm:text-lg"
+                            className="text-gray-500 italic text-base sm:text-lg"
                         >
                             Together, with God’s Guidance, We’ll Begin Our Forever
                         </motion.p>
@@ -139,7 +139,7 @@ export default function Hero() {
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.6 }}
-                            className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-amber-600"
+                            className="pinyon-script-regular text-6xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-amber-600"
                         >
                             {config.data.groomName} & {config.data.brideName}
                         </motion.h2>
@@ -151,9 +151,9 @@ export default function Hero() {
                         transition={{ delay: 0.8 }}
                         className="relative max-w-md mx-auto"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-b from-yellow-50/50 to-white/50 backdrop-blur-md rounded-2xl" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#f9f5f0] to-white/50 backdrop-blur-md rounded-2xl" />
 
-                        <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl border border-yellow-100/50">
+                        <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl border-yellow-100/50">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-px">
                                 <div className="w-20 sm:w-32 h-[2px] bg-gradient-to-r from-transparent via-yellow-200 to-transparent" />
                             </div>
@@ -204,7 +204,7 @@ export default function Hero() {
                                         Mr./Mrs./Brother/Sister
                                     </p>
                                     <p className="text-yellow-500 font-semibold text-lg">
-                                        {guestName ? guestName : "Tamu"}
+                                        {guestName ? guestName : "Guest"}
                                     </p>
                                 </motion.div>
                             </div>

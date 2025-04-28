@@ -28,14 +28,15 @@ const LandingPage = ({ onOpenInvitation }) => (
         className="w-full max-w-md"
       >
         {/* Card Container */}
-        <div className="backdrop-blur-sm bg-white/50 p-6 sm:p-8 md:p-10 rounded-2xl border border-yellow-100/50 shadow-xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-center text-gray-800 leading-tight font-black">
+        <div className="backdrop-blur-sm bg-white/50 px-4 py-4 pt-2 sm:p-8 md:p-10 rounded-2xl border border-yellow-100/50 shadow-xl">
+          <h1 className="pinyon-script-regular text-5xl sm:text-4xl md:text-5xl font-serif text-center text-gray-800 leading-tight font-black">
             {config.data.groomName}
             <span className="text-yellow-400 mx-2 sm:mx-3">&</span>
             {config.data.brideName}
           </h1>
-          <p className="text-center mb-5">
-            With faith and love, we look forward to this day.
+          <p className="text-center italic mb-5">
+            When the time is right, I the LORD<br />will make it happen.
+            -<span className="text-xs">Isaiah 60:22</span>
           </p>
 
           {/* Top Decorative Line */}
@@ -75,7 +76,7 @@ const LandingPage = ({ onOpenInvitation }) => (
             className="text-center space-y-4"
           >
             <div className="space-y-2">
-              <h1 className="text-1xl sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
+              <h1 className="text-lg sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
                 We’ve saved a special seat just for you! Reservation for one.
               </h1>
               <div className="h-px w-16 sm:w-24 mx-auto bg-yellow-200" />
