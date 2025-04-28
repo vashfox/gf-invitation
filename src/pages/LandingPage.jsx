@@ -34,24 +34,18 @@ const LandingPage = ({ onOpenInvitation }) => (
             <span className="text-yellow-400 mx-2 sm:mx-3">&</span>
             {config.data.brideName}
           </h1>
-          <p className="text-center italic mb-5">
+          <p className="text-center italic text-xs mb-4">
             When the time is right, I the LORD<br />will make it happen.
             -<span className="text-xs">Isaiah 60:22</span>
           </p>
 
-          {/* Top Decorative Line */}
-          <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
-            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
-            <div className="w-2 h-2 rounded-full bg-yellow-300" />
-            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
-          </div>
-
+          
           {/* Date and Time */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-row gap-4 mb-6 sm:mb-8 items-center justify-center"
+            className="flex flex-row gap-4 mb-4 sm:mb-8 items-center justify-center"
           >
             <div className="inline-flex flex-col items-center space-y-1 bg-white/80 px-4 sm:px-6 py-2 sm:py-3 rounded-xl">
               <Calendar className="w-5 h-5 text-yellow-400" />
@@ -73,13 +67,18 @@ const LandingPage = ({ onOpenInvitation }) => (
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-center space-y-4"
+            className="text-center space-y-2"
           >
             <div className="space-y-2">
-              <h1 className="text-lg sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
+              <h1 className="text-xs sm:text-2xl md:text-3xl font-serif text-gray-800 leading-tight">
                 We’ve saved a special seat just for you! Reservation for one.
               </h1>
-              <div className="h-px w-16 sm:w-24 mx-auto bg-yellow-200" />
+              {/* Top Decorative Line */}
+          <div className="flex items-center justify-center gap-3 mb-4 sm:mb-8">
+            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
+            <div className="w-2 h-2 rounded-full bg-yellow-300" />
+            <div className="h-px w-12 sm:w-16 bg-yellow-200/50" />
+          </div>
             </div>
           </motion.div>
 
@@ -108,7 +107,7 @@ const LandingPage = ({ onOpenInvitation }) => (
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </motion.button>
 
-            <video className="rounded-xl" loop autoPlay controls poster="./images/RLS-266.jpg">
+            <video className="rounded-xl" loop controls poster="./images/RLS-266.jpg">
               <source src="./images/savedd.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
