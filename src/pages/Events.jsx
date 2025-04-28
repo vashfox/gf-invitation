@@ -117,7 +117,7 @@ export default function Events() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="max-w-2xl mx-auto my-8 rounded-xl"
           >
-            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+            <section className="bg-[#f9f5f0] py-6 px-2 rounded-xl">
               <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8">
                 Wedding Program Overview
               </h2>
@@ -166,7 +166,7 @@ export default function Events() {
               <div className="h-[1px] w-12 bg-yellow-200" />
             </motion.div>
 
-            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+            <section className="bg-[#f9f5f0] py-6 px-2 rounded-xl">
               <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8 rounded-sm">
                 Principal Sponsors
               </h2>
@@ -213,7 +213,7 @@ export default function Events() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="max-w-2xl mx-auto my-8"
           >
-            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+            <section className="bg-[#f9f5f0] py-6 px-2 rounded-xl">
               <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8 rounded-sm">
                 Secondary Sponsors
               </h2>
@@ -276,7 +276,7 @@ export default function Events() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="max-w-2xl mx-auto my-8"
           >
-            <section className="bg-[#f9f5f0] py-10 px-4 rounded-xl">
+            <section className="bg-[#f9f5f0] py-6 px-4 rounded-xl">
               <h2 className="pinyon-script-regular text-4xl sm:text-3xl font-bold text-center text-[#5e473b] mb-8 rounded-sm">
                 To assist us in our needs
               </h2>
