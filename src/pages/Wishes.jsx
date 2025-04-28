@@ -121,7 +121,7 @@ export default function Wishes() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-4 mb-8"
           >
             <motion.span
               initial={{ opacity: 0, y: 10 }}
