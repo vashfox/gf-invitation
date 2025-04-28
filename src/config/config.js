@@ -174,7 +174,7 @@ const config = {
         ],
         ninong: [
           "Margarito Ratilla Sr.",
-          "Isidro Ratilla Jr.",
+          "Isidro Ratilla Sr.",
           "Olimpio Ratilla",
           "Terso Espina",
           "Dennis Baclay",
