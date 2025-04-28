@@ -16,7 +16,7 @@ const config = {
     location: "Our Lady Mediatrix of All Grace Cathedral",
     address: "Quezon Blvd, Kidapawan City",
     ogImage: "/images/og-image.jpg",
-    favicon: "/images/favicon.ico",
+    favicon: "/favicon.ico",
     agenda: [
       {
         title: "Events Place: The White Barn",
