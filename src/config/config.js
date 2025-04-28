@@ -160,7 +160,7 @@ const config = {
           "Haydee Aton",
           "Helen Grace Turing",
           "Almira Bigcas",
-          "Elaine Boloron",
+          "Elaine Banga",
           "Annabelle Budiongan",
           "Annie Ratilla",
           "Badeth Gumapac",
