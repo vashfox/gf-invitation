@@ -268,3 +268,8 @@
 .color-brown-deep {
   background-color: #6e4b3a;
 }
+
+.credits {
+  object-fit: cover;
+  width: 100%;
+}

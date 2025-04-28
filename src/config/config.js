@@ -200,9 +200,18 @@ const config = {
         cord: ["Neil Adrian Villegas", "Earl Villegas"],
       },
       credits: [
-        "Anastasia's Surprises - Bouguets and Balloons",
-        "Baeng's Creation",
-        "Sibonga's Bakeshop",
+        {
+          name: "Anastasia's Surprises - Bouguets and Balloons",
+          logo: "/images/f3.png",
+        },
+        {
+          name: "Baeng's Creation",
+          logo: "/images/f2.png",
+        },
+        {
+          name: "Sibonga's Bakeshop",
+          logo: "/images/f1.png",
+        },
       ],
     },
   },

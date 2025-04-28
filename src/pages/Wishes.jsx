@@ -244,9 +244,10 @@ export default function Wishes() {
                     className="group relative w-[280px]"
                   >
                     <div className="relative backdrop-blur-sm bg-[#f9f5f0] p-4 rounded-xl min-h-full">
+                      <img src={credit.logo} alt={credit.name} className="credits h-20 mx-auto mb-2" />
                       <div className="text-center">
                         <i className="text-xs text-gray-300">Credits to</i><br/>
-                        {credit}
+                        {credit.name}
                       </div>
                     </div>
                   </motion.div>
