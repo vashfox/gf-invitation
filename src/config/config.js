@@ -192,7 +192,7 @@ const config = {
           "Alvin Mibalo",
           "Gio Vanni Tolibas",
           "Lou Bulac",
-          "Annabelle Into",
+          "Anabelle Into",
         ],
       },
       secondarySponsors: {
