@@ -17,6 +17,9 @@ import {
 import { useState, useEffect } from "react";
 import { formatEventDate } from "@/lib/formatEventDate";
 import { createClient } from "@supabase/supabase-js";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 export default function Wishes() {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -30,6 +33,7 @@ export default function Wishes() {
   );
 
   const [guestName, setGuestName] = useState("");
+  const MySwal = withReactContent(Swal);
 
   const options = [
     { value: true, label: "Yes, I will be attending." },
@@ -45,8 +49,11 @@ export default function Wishes() {
   async function getMessages() {
     let { data: invitationMessages } = await supabase
       .from("invitationMessages")
-      .select("*")
-      .eq("visibility", true);
+      .select("*", { count: "exact" })
+      .eq("visibility", true)
+      .order("id", { ascending: true })
+      .range(0, 500);
+
     setWishes(invitationMessages);
   }
 
@@ -92,6 +99,71 @@ export default function Wishes() {
       default:
         return <HelpCircle className="w-4 h-4 text-amber-500" />;
     }
+  };
+
+  const showMessages = () => {
+    const mHtml = (
+      <div className="h-[60vh] overflow-y-auto">
+        {wishes.map((wish, index) => (
+          <motion.div
+            key={'wish-mdl-' + index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ delay: index * 0.1 }}
+            className="group relative mb-4"
+          >
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/50 to-amber-100/50 rounded-xl transform transition-transform group-hover:scale-[1.02] duration-300" />
+
+            {/* Card content */}
+            <div className="relative backdrop-blur-sm bg-white/80 p-4 rounded-xl border border-yellow-100/50 shadow-md min-h-full">
+              {/* Header */}
+              <div className="flex items-start space-x-3 mb-2">
+                {/* Avatar */}
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-amber-400 flex items-center justify-center text-white text-sm font-medium">
+                    {wish.name[0].toUpperCase()}
+                  </div>
+                </div>
+
+                {/* Name, Time, and Attendance */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center space-x-2">
+                    <h4 className="font-medium text-gray-800 text-sm truncate">
+                      {wish.name}
+                    </h4>
+                    {getAttendanceIcon(wish.joining)}
+                  </div>
+                  <div className="flex items-center space-x-1 text-gray-500 text-xs">
+                    <Clock className="w-3 h-3" />
+                    <time className="truncate">
+                      {formatEventDate(wish.created_at)}
+                    </time>
+                  </div>
+                </div>
+              </div>
+
+              {/* Message */}
+              <p className="text-gray-600 text-sm mb-2">{wish.message}</p>
+
+              {/* Optional: Time indicator for recent messages */}
+              {Date.now() - new Date(wish.created_at).getTime() < 3600000 && (
+                <div className="absolute top-2 right-2">
+                  <span className="px-2 py-1 rounded-full bg-yellow-100 text-yellow-600 text-xs font-medium">
+                    New
+                  </span>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    );
+
+    MySwal.fire("Best Wishes & Prayers", mHtml, {
+      
+    });
   };
 
   useEffect(() => {
@@ -158,6 +230,12 @@ export default function Wishes() {
           </motion.div>
 
           {/* Wishes List */}
+          <button
+            className="text-yellow-500 text-xs font-medium underline"
+            onClick={showMessages}
+          >
+            View Messages and Prayers <span>→</span>
+          </button>
           <div className="max-w-2xl mx-auto mt-2 space-y-6">
             <AnimatePresence>
               <Marquee
@@ -240,7 +318,9 @@ export default function Wishes() {
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2 text-gray-500 text-sm mb-1">
                       <User className="w-4 h-4" />
-                      <span>Guest Name: <b>{guestName || "Guest"}</b></span>
+                      <span>
+                        Guest Name: <b>{guestName || "Guest"}</b>
+                      </span>
                     </div>
                   </div>
                   <motion.div

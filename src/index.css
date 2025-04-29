@@ -282,3 +282,27 @@
   object-fit: cover;
   width: 100%;
 }
+
+/* .swal-button-container {
+  width: 100%;
+  margin: 0;
+}
+
+.swal-button.swal-button--confirm {
+  width: 100%;
+}
+
+.swal-button {
+  background-color: #fffef9;
+  color: #fac022;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #fbc023;
+  color: #ffffff;
+} */
+
+
+.swal2-styled {
+  background: #fbc221;
+}
