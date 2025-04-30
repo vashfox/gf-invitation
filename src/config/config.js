@@ -168,7 +168,6 @@ const config = {
           "Roberta Bullanday",
           "Flora May Pancho",
           "Carmencita Into",
-          "Clarizel Bulac",
           "Ana Fe Into",
           "Fe Gumapac",
           "Marisyl Agno"
@@ -192,7 +191,6 @@ const config = {
           "Pepito Iremedio Sr.",
           "Alvin Mibalo",
           "Gio Vanni Tolibas",
-          "Lou Bulac",
           "Anabelle Into",
           "Thelma Asentista",
           "Renan Agno"
