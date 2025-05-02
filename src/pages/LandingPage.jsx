@@ -83,9 +83,7 @@ export default function LandingPage({ onOpenInvitation }) {
             >
               <div className="space-y-2">
                 <h1 className="text-sm font-serif text-gray-800 leading-tight">
-                  We’ve saved a special seat just for you!
-                  <br />
-                  Reservation for one.
+                  Come Celebrate with Us.
                 </h1>
                 {/* Top Decorative Line */}
                 <div className="flex items-center justify-center gap-3 mb-2">
@@ -121,7 +119,7 @@ export default function LandingPage({ onOpenInvitation }) {
                       ease: "easeInOut",
                     }}
                   >
-                    <span>View Your Special Invitation</span>&nbsp;
+                    <span>{homeVenue !== "1" ? "View Your Special Invitation":"View Invitation"}</span>&nbsp;
                     <span>→</span>
                   </motion.div>
                 </span>
