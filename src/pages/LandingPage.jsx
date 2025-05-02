@@ -119,7 +119,12 @@ export default function LandingPage({ onOpenInvitation }) {
                       ease: "easeInOut",
                     }}
                   >
-                    <span>{homeVenue !== "1" ? "View Your Special Invitation":"View Invitation"}</span>&nbsp;
+                    <span>
+                      {homeVenue !== "1"
+                        ? "View Your Special Invitation"
+                        : "View Invitation"}
+                    </span>
+                    &nbsp;
                     <span>→</span>
                   </motion.div>
                 </span>
