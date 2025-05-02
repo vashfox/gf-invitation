@@ -101,7 +101,7 @@ export default function Location() {
                 <h3 className="text-2xl font-serif text-gray-800 mb-6">
                   {homeVenue !== "1"
                     ? config.data.location
-                    : "Francis & Gen Residence"}
+                    : "Emon & Rebecca's Residence"}
                 </h3>
 
                 <div className="space-y-4">
