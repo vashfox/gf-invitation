@@ -165,7 +165,7 @@ export default function Gifts() {
 
           {/* Wishes List */}
           <p className="inline-block text-yellow-500 mt-10">
-            Special thanks to our spronsors:
+            Special thanks to our sponsors:
           </p>
           <div className="max-w-2xl mx-auto mt-2 mb-4 space-y-6">
             <AnimatePresence>
